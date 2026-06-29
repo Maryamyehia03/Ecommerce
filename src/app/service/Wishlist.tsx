@@ -1,3 +1,5 @@
+"use server";
+
 import { getToken } from "@/lib/server-utils";
 
 export async function addUserWishlist(productId:string){

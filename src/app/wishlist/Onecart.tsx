@@ -11,8 +11,8 @@ import { wishlistcontext } from '../context/WishlistContext'
 
 export default function Onecart({pro  }:{pro:Datum }) {
   // const [wishlist, setwishlist] = useState();
-        const {carts ,fetchCart} = useContext(Cartcontext);
-        const {wishlist ,fetchwishlist} = useContext(wishlistcontext);
+        const {fetchCart} = useContext(Cartcontext);
+        const {fetchwishlist} = useContext(wishlistcontext);
 
         
   

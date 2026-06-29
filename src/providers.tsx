@@ -6,14 +6,12 @@ import WishlistProvider from './app/context/WishlistContext'
 
 export default function Providers({ children }:{children: ReactNode}) {
   return (
-    <>
     <SessionProvider>
       <CartProvider>
         <WishlistProvider>
-        {children}
+          {children}
         </WishlistProvider>
       </CartProvider>
     </SessionProvider>
-    </>
   )
 }

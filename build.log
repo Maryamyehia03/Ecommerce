@@ -1,0 +1,33 @@
+   ▲ Next.js 15.5.0
+   - Environments: .env.local
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+Generating .flowbite-react\class-list.json file...
+Warning: Your PostCSS configuration defines a field which is not supported (`server`). Please remove this configuration value.
+Generating .flowbite-react\class-list.json file...
+Generating .flowbite-react\class-list.json file...
+Warning: Your PostCSS configuration defines a field which is not supported (`server`). Please remove this configuration value.
+Generating .flowbite-react\class-list.json file...
+ ✓ Compiled successfully in 15.8s
+   Linting and checking validity of types ...
+
+./src/app/types/next-auth.d.ts
+1:9  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/wishlist/Onecart.tsx
+14:16  Warning: 'carts' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+15:16  Warning: 'wishlist' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+
+> Build error occurred
+[Error: Cannot find module 'c:\Users\mhoyh\OneDrive - Cairo University - Students\Desktop\route\Next\E-commerce\.next\server\middleware-manifest.json'
+Require stack:
+- c:\Users\mhoyh\OneDrive - Cairo University - Students\Desktop\route\Next\E-commerce\node_modules\next\dist\build\index.js
+- c:\Users\mhoyh\OneDrive - Cairo University - Students\Desktop\route\Next\E-commerce\node_modules\next\dist\cli\next-build.js] {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}

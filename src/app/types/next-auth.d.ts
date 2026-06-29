@@ -1,4 +1,4 @@
-import {User} from "next-auth"
+import {} from "next-auth"
 
 declare module "next-auth" {
   
