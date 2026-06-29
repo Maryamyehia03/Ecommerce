@@ -1,18 +1,37 @@
+const getApiBaseUrl = () => process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://ecommerce.routemisr.com";
+
 export async function getProducts() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/products`,
-    {
-    cache:'no-cache'
+  try {
+    const res = await fetch(`${getApiBaseUrl()}/api/v1/products`, {
+      cache: "no-cache",
     });
-  const {data} = await res.json();
-  return data;
+
+    if (!res.ok) {
+      return [];
+    }
+
+    const { data } = await res.json();
+    return data ?? [];
+  } catch {
+    return [];
+  }
 }
-export async function getSpecficProducts(id:string) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/products/${id}`,
-    {
-    cache:'no-cache'
+
+export async function getSpecficProducts(id: string) {
+  try {
+    const res = await fetch(`${getApiBaseUrl()}/api/v1/products/${id}`, {
+      cache: "no-cache",
     });
-  const {data} = await res.json();
-  return data;
+
+    if (!res.ok) {
+      return null;
+    }
+
+    const { data } = await res.json();
+    return data ?? null;
+  } catch {
+    return null;
+  }
 }
 
 
