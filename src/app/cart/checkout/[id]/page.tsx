@@ -6,34 +6,27 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { redirect, useParams, useRouter } from "next/navigation"
+import { redirect, useParams, } from "next/navigation"
 import { toast } from "sonner"
 import { checkoutt } from "@/app/service/checkout"
-
-const formSchema = z.object({
-  details: z.string(),
-  phone: z.string(),
-  city:z.string()
-})
+import { formSchema } from "./schema"
 
 export default function Page() {
     const {id}:{id:string} = useParams();
-  const router = useRouter();
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      details: "",
-      phone: "",
-      city: ""
-    }
-  })
+    const form = useForm<z.infer<typeof formSchema>>({
+      resolver: zodResolver(formSchema),
+      defaultValues: {
+        details: "",
+        phone: "",
+        city: ""
+      }
+    })
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     const formdata ={shippingAddress:data};

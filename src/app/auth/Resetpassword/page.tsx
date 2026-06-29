@@ -14,15 +14,9 @@ import { Button } from "@/components/ui/button";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { toast } from "sonner";
 import { ResetPassword } from "@/app/service/ResetPassword";
 import { signIn } from "next-auth/react";
-
-const formSchema = z.object({
-    email:z.email("Invalid email address"),
-    newPassword: z.string(),
-
-})
+import { formSchema } from "./schema";
 
 export default function Resetpassword() {
   const router = useRouter();

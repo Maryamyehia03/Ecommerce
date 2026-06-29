@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import React, { useContext, useState } from 'react'
+import React, { useContext, } from 'react'
 import { FaStar } from 'react-icons/fa';
 import { FaHeart } from 'react-icons/fa';
 import { Iproducts } from '../types/products.types';
@@ -10,7 +10,7 @@ import { addUserCart } from '../service/cart';
 import { Cartcontext } from '../context/Cartcontext';
 import { wishlistcontext } from '../context/WishlistContext';
 import { useRouter } from 'next/navigation';
-import { tr } from 'zod/v4/locales';
+// import { tr } from 'zod/v4/locales';
 import { Datum } from '../types/Wishlist';
 
 export default function ProductCard({product}: {product: Iproducts}) {

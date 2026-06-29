@@ -4,7 +4,6 @@ import React from "react";
 import Slider from "react-slick";
 // import { getCategories } from "../service/categories";
 import { Icategories } from "../types/ctegories";
-import { ar } from "zod/v4/locales";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 export default function Mainslider() {

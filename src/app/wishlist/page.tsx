@@ -6,7 +6,7 @@ import Onecart from './Onecart';
 
 export default function Page() {
 
-  const {wishlist ,fetchwishlist} = useContext(wishlistcontext);
+  const {wishlist ,} = useContext(wishlistcontext);
   
   
   return (

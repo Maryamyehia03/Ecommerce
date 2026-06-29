@@ -21,8 +21,8 @@ export async function gatAllBrand() {
     let jsonErr = null;
     try {
       jsonErr = JSON.parse(text);
-    } catch (e) {
-      // ignore
+    } catch (error) {
+      console.error(error);
     }
     throw new Error(`Failed to fetch brands from ${url}. Status: ${res.status}. ${jsonErr ? JSON.stringify(jsonErr) : 'Response: ' + text}`);
   }

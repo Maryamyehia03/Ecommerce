@@ -15,7 +15,7 @@ const handler = NextAuth({
     },
 
     authorize: async (
-      credentials: Record<"email" | "password", string> | undefined,req) => {
+      credentials: Record<"email" | "password", string> | undefined,) => {
         const res = await fetch(`${process.env.API_BASE_URL}/api/v1/auth/signin`,{
             method: 'POST',
             headers: {

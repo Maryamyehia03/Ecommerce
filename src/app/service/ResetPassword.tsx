@@ -1,6 +1,6 @@
 "use server"
 
-import { formSchema } from "../auth/Resetpassword/page";
+import { formSchema } from "../auth/Resetpassword/schema";
 import z from "zod";
 
 export async function ResetPassword(data:z.infer<typeof formSchema>) {
